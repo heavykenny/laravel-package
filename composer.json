@@ -1,0 +1,54 @@
+{
+    "name": "heavykenny/laravel-package",
+    "description": "Laravel Package Template",
+    "keywords": [
+        "heavykenny",
+        "laravel-package"
+    ],
+    "homepage": "https://github.com/heavykenny/laravel-package",
+    "license": "MIT",
+    "type": "library",
+    "authors": [
+        {
+            "name": "Kehinde Olawuwo",
+            "email": "olawuwokenny@gmail.com",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "php": "^7.1",
+        "illuminate/support": "5.8.*"
+    },
+    "require-dev": {
+        "orchestra/testbench": "3.8.*",
+        "phpunit/phpunit": "^7.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Heavykenny\\LaravelPackage\\": "src"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Heavykenny\\LaravelPackage\\Tests\\": "tests"
+        }
+    },
+    "scripts": {
+        "test": "vendor/bin/phpunit",
+        "test-coverage": "vendor/bin/phpunit --coverage-html coverage"
+
+    },
+    "config": {
+        "sort-packages": true
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Heavykenny\\LaravelPackage\\LaravelPackageServiceProvider"
+            ],
+            "aliases": {
+                "LaravelPackage": "Heavykenny\\LaravelPackage\\LaravelPackageFacade"
+            }
+        }
+    }
+}
